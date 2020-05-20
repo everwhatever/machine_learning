@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 from sklearn.metrics import confusion_matrix,classification_report
@@ -25,6 +26,8 @@ predictions=model.predict(X_test)
 print(confusion_matrix(y_test,predictions))
 print(classification_report(y_test,predictions))
 
+#print(sns.pairplot(iris))
+
 
 """
 #looking for best_params_
@@ -38,3 +41,4 @@ grid_pred=grid.predict(X_test)
 print(confusion_matrix(y_test,grid_pred))
 print(classification_report(y_test,grid_pred))
 """
+plt.show()
